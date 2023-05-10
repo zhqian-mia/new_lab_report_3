@@ -35,7 +35,7 @@ government//Gen_Account_Office/pe1019.txt:Educational Research Association meeti
 ```
 This command allow users to search for the word `Toronto` recursively in all files and directories under `government/`. Both files name and the lines which contain the word `Toronto` are printed out.
   
-Now let's try the second command `grep -l "pattern" /path/to/directory/*`. My first example is `grep -l "UCSD" biomed/*`
+Now let's try the second command `grep -l "pattern" /path/to/directory/*`. My first example is `grep -l "UCS" biomed/*`
 ```
 qianzhijun@qianzhijundeMacBook-Pro technical % grep -l "UCSD" biomed/*
 biomed/1471-2091-3-30.txt
