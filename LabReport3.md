@@ -34,4 +34,29 @@ government//Gen_Account_Office/pe1019.txt:Educational Research Association meeti
 ```
 This command allow users to search for the word `Toronto` recursively in all files and directories under `government/`. Both files name and the lines which contain the word `Toronto` are printed out.
   
-Now let's try the second command `grep -l "pattern" /path/to/directory/*`. My first example is 
+Now let's try the second command `grep -l "pattern" /path/to/directory/*`. My first example is `grep -l "UCSD" biomed/*`
+```
+qianzhijun@qianzhijundeMacBook-Pro technical % grep -l "UCSD" biomed/*
+biomed/1471-2091-3-30.txt
+biomed/1471-2407-2-15.txt
+biomed/1471-244X-3-5.txt
+biomed/1472-6823-2-2.txt
+biomed/1476-4598-2-2.txt
+biomed/bcr620.txt
+```
+Compare to the first example of the first command, now the output show in the terminal only shows unique file names. To be more specific, the terminal print out all the file under biomed directory that contain the word `UCSD`.   
+
+My second example is `grep -l "Alcohol" biomed/* `.
+```
+qianzhijun@qianzhijundeMacBook-Pro technical % grep -l "Alcohol" biomed/*                                                                            
+biomed/1471-213X-3-4.txt
+biomed/1471-2156-3-22.txt
+biomed/1471-2210-1-2.txt
+biomed/1471-2334-3-11.txt
+biomed/1471-2458-2-6.txt
+biomed/1471-2466-2-3.txt
+biomed/1478-7954-1-3.txt
+biomed/bcr605.txt
+biomed/gb-2001-2-7-research0025.txt
+```
+As the above, this command find all the unique files' name who contain the word "Alcohol" under the `biomed` directory. 
