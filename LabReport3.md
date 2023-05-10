@@ -24,7 +24,7 @@ biomed/1476-4598-2-2.txt:          Ludwig Institute of Cancer Research at UCSD. 
 biomed/bcr620.txt:          UCSD Medical Center. Samples were obtained in random
 biomed/bcr620.txt:          approval of the UCSD Institutional Review Board for
 ```
-This command allow users to search for the word `UCSD` recursively in all files and directories under biomed/*.  
+This command allow users to search for the word `UCSD` recursively in all files and directories under biomed/*. Both files name and the lines which contain the word `UCSD` are printed out.
 
 The second example is `grep -r "Toronto" government/`
 ```
@@ -32,4 +32,6 @@ qianzhijun@qianzhijundeMacBook-Pro technical % grep -r "Toronto" government/
 government//About_LSC/ONTARIO_LEGAL_AID_SERIES.txt:beautiful city of Toronto to talk with you about the subject that
 government//Gen_Account_Office/pe1019.txt:Educational Research Association meeting, Toronto, Canada, April
 ```
-This command allow users to search for the word `Toronto` recursively in all files and directories under `government/`.
+This command allow users to search for the word `Toronto` recursively in all files and directories under `government/`. Both files name and the lines which contain the word `Toronto` are printed out.
+  
+Now let's try the second command `grep -l "pattern" /path/to/directory/*`. My first example is 
