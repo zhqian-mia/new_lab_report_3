@@ -40,7 +40,7 @@ biomed/gb-2003-4-8-r50.txt:        UCSC Genome Browser [ 14 16 ] . The first is 
 biomed/gb-2003-4-8-r50.txt:          UCSC Genome Browser, August 2001 assembly, displays
 biomed/gb-2003-4-8-r50.txt:          available through the UCSC Genome Browser [ 14 15 16 ]
 ```
-This command allow users to search for the word `UCS` recursively in all files and directories under `biomed/*`. Both files name and the lines which contain the three letters `UCS` are printed out, which means it could be `UCSD` or `UCSC`. `-r` only show the files name and lines that contain the pattern, but not in whole word.
+This command allow users to search for the three continuous letters `UCS` recursively in all files and directories under `biomed/*`. Both files name and the lines which contain the three letters `UCS` are printed out, which means it could be `UCSD` or `UCSC`. `-r` only show the files name and lines that contain the pattern, but not in whole word.
 
 The second example is `grep -r "Toronto" government/`
 ```
