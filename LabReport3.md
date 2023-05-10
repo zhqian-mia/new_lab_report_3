@@ -1,10 +1,11 @@
-#Lab Report 3  
+## Lab Report 3  ##
   
 Today we will look at four interesting commands of `grep`.  
 * `grep -r "pattern" /path/to/directory`
 * `grep -l "pattern" /path/to/directory/*`
 * `grep -w "pattern" /path/to/file`
 * `grep -v "pattern" /path/to/file`  
+**All the sources above comes from this [link](https://chat.openai.com/)**
   
 Each commands will be offer two different examples to illustrate its functions.  
   
@@ -59,4 +60,6 @@ biomed/1478-7954-1-3.txt
 biomed/bcr605.txt
 biomed/gb-2001-2-7-research0025.txt
 ```
-As the above, this command find all the unique files' name who contain the word "Alcohol" under the `biomed` directory. 
+As the above, this command find all the unique files' name who contain the word "Alcohol" under the `biomed` directory.  
+  
+Now, let's move to the third command choice `grep -w "pattern" /path/to/file`
