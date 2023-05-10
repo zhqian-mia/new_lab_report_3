@@ -8,4 +8,19 @@ Today we will look at four interesting commands of `grep`.
   
 Each commands will be offer two different examples to illustrate its functions.  
   
-For convenience, 
+For convenience, I used `grep ".txt" find-results.txt > grep-results.txt' to put all txt files into a new file named grep-results.txt. Right now, the file grep-results.txt should have a bunch of file direcotories in it.  
+  
+`cd technical`. Now the pwd is `/Users/qianzhijun/Documents/GitHub/docsearch/technical`
+
+Let's try the first command `grep -r "pattern" /path/to/directory`. My first example is `grep -r "UCSD" biomed/*` 
+```
+qianzhijun@qianzhijundeMacBook-Pro technical % grep -r "UCSD" biomed/*
+biomed/1471-2091-3-30.txt:        Insel, UCSD) demonstrated constitutive activation of ERKs
+biomed/1471-2407-2-15.txt:          UCSD Viral Vector Core. The plasmids were co-transfected
+biomed/1471-2407-2-15.txt:          approved by the animal care committee at UCSD. The cells
+biomed/1471-244X-3-5.txt:          UCSD Medical Center, La Jolla, during July and August of
+biomed/1472-6823-2-2.txt:          respective local human IRBs (UCSD, La Jolla, CA; Veterans
+biomed/1476-4598-2-2.txt:          Ludwig Institute of Cancer Research at UCSD. The tumor
+biomed/bcr620.txt:          UCSD Medical Center. Samples were obtained in random
+biomed/bcr620.txt:          approval of the UCSD Institutional Review Board for
+```
