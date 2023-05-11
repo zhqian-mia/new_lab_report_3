@@ -75,7 +75,7 @@ biomed/1478-7954-1-3.txt
 biomed/bcr605.txt
 biomed/gb-2001-2-7-research0025.txt
 ```
-As the above, this command find all the unique files' name who contain the word "Alcohol" under the `biomed` directory.  
+As the above, this command find all the unique files' name whose file inside contain the word "Alcohol" under the `biomed` directory.  
   
 *Now, let's move to the third command choice `grep -w "pattern" /path/to/directory/*`. My first example is:`grep -w "UCSD" biomed/*`*
 ```
