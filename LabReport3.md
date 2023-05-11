@@ -3,8 +3,8 @@
 Today we will look at four interesting commands of `grep`.  
 * `grep -r "pattern" /path/to/directory`
 * `grep -l "pattern" /path/to/directory/*`
-* `grep -w "pattern" /path/to/file`
-* `grep -v "pattern" /path/to/file`  
+* `grep -w "pattern" /path/to/directory/*`
+* `grep -v "pattern" /path/to/directory/*`  
 **All the sources above comes from chatGPT**
   
 Each commands will be offer two different examples to illustrate its functions.  
@@ -13,7 +13,7 @@ For convenience, I used `grep ".txt" find-results.txt > grep-results.txt' to put
   
 `cd technical`. Now the pwd is `/Users/qianzhijun/Documents/GitHub/docsearch/technical`
 
-Let's try the first command `grep -r "pattern" /path/to/directory`. My first example is `grep -r "UCS" biomed/*` 
+*Let's try the first command `grep -r "pattern" /path/to/directory`. My first example is `grep -r "UCS" biomed/*`*  
 ```
 qianzhijun@qianzhijundeMacBook-Pro technical % grep -r "UCS" biomed/*
 biomed/1471-2091-3-30.txt:        Insel, UCSD) demonstrated constitutive activation of ERKs
@@ -50,7 +50,7 @@ government//Gen_Account_Office/pe1019.txt:Educational Research Association meeti
 ```
 This command allow users to search for the word `Toronto` recursively in all files and directories under `government/`. Both files name and the lines which contain the 7 letters `Toronto` are printed out.
   
-Now let's try the second command `grep -l "pattern" /path/to/directory/*`. My first example is `grep -l "UCSD" biomed/*`
+*Now let's try the second command `grep -l "pattern" /path/to/directory/*`. My first example is `grep -l "UCSD" biomed/*`*
 ```
 qianzhijun@qianzhijundeMacBook-Pro technical % grep -l "UCSD" biomed/*
 biomed/1471-2091-3-30.txt
@@ -77,7 +77,7 @@ biomed/gb-2001-2-7-research0025.txt
 ```
 As the above, this command find all the unique files' name who contain the word "Alcohol" under the `biomed` directory.  
   
-Now, let's move to the third command choice `grep -w "pattern" /path/to/file`. My first example is:
+*Now, let's move to the third command choice `grep -w "pattern" /path/to/directory/*`. My first example is:`grep -w "UCSD" biomed/*`*
 ```
 qianzhijun@qianzhijundeMacBook-Pro technical % grep -w "UCSD" biomed/*
 biomed/1471-2091-3-30.txt:        Insel, UCSD) demonstrated constitutive activation of ERKs
@@ -99,7 +99,8 @@ plos/journal.pbio.0020216.txt:        without accident. Furthermore, even though
 ```
 This command will print out the file names and the lines that contain the whole word `accident` under the `plos/*` directory. `-w` will print out the lines and file names that contain the pattern as a whole word.  
   
-Now, let's move to the last command `grep -v "pattern" /path/to/file`. My first example is `grep -v -l "alcohol" government/Alcohol_Problems/*`. 
+*Now, let's move to the last command `grep -v "pattern" /path/to/directory/*`.*  
+My first example is `grep -v -l "alcohol" government/Alcohol_Problems/*`.  
 ```
 qianzhijun@qianzhijundeMacBook-Pro technical % grep -v "alcohol" government/Alcohol_Problems/*
 government/Alcohol_Problems/Session4-PDF.txt:the model.
