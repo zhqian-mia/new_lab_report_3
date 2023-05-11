@@ -90,3 +90,13 @@ biomed/bcr620.txt:          UCSD Medical Center. Samples were obtained in random
 biomed/bcr620.txt:          approval of the UCSD Institutional Review Board for
 ```
 This command will search all lines in the files or directories under the `biomed/*` that has the word `UCSD`. It will print out the non-unique files name that contain the whole word `UCSD`. The difference between `-r` and `-w` is that `-r` will print out both files names and lines (files name may repeat) as long as it has the pattern, while `-w` will only print out the lines and file names (files name may repeat) that has the whole word.  
+  
+My second example is `grep -w "accident" plos/*`
+```
+qianzhijun@qianzhijundeMacBook-Pro technical % grep -w "accident" plos/*
+plos/journal.pbio.0020101.txt:        blood cortisol (Sapolsky 1994). An accident of history, however, selectively wiped out all
+plos/journal.pbio.0020216.txt:        without accident. Furthermore, even though bees experience only a small increase in
+```
+This command will print out the file names and the lines that contain the whole word `accident` under the `plos/*` directory. `-w` will print out the lines and file names that contain the pattern as a whole word.  
+  
+Now, let's move to the last command `grep -v "pattern" /path/to/file`. 
