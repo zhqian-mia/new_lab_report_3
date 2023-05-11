@@ -77,4 +77,16 @@ biomed/gb-2001-2-7-research0025.txt
 ```
 As the above, this command find all the unique files' name who contain the word "Alcohol" under the `biomed` directory.  
   
-Now, let's move to the third command choice `grep -w "pattern" /path/to/file`
+Now, let's move to the third command choice `grep -w "pattern" /path/to/file`. My first example is:
+```
+qianzhijun@qianzhijundeMacBook-Pro technical % grep -w "UCSD" biomed/*
+biomed/1471-2091-3-30.txt:        Insel, UCSD) demonstrated constitutive activation of ERKs
+biomed/1471-2407-2-15.txt:          UCSD Viral Vector Core. The plasmids were co-transfected
+biomed/1471-2407-2-15.txt:          approved by the animal care committee at UCSD. The cells
+biomed/1471-244X-3-5.txt:          UCSD Medical Center, La Jolla, during July and August of
+biomed/1472-6823-2-2.txt:          respective local human IRBs (UCSD, La Jolla, CA; Veterans
+biomed/1476-4598-2-2.txt:          Ludwig Institute of Cancer Research at UCSD. The tumor
+biomed/bcr620.txt:          UCSD Medical Center. Samples were obtained in random
+biomed/bcr620.txt:          approval of the UCSD Institutional Review Board for
+```
+This command will search all lines in the files or directories under the biomed/*. It will print out the non-unique files name that contain the whole word `UCSD`. The difference between `-r` and `-w` is that `-r` will print out both non-unique files names and lines as long as it has the pattern, while `-w` will only print out the lines and file names that has the whole word.  
