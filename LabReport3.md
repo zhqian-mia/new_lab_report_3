@@ -99,4 +99,40 @@ plos/journal.pbio.0020216.txt:        without accident. Furthermore, even though
 ```
 This command will print out the file names and the lines that contain the whole word `accident` under the `plos/*` directory. `-w` will print out the lines and file names that contain the pattern as a whole word.  
   
-Now, let's move to the last command `grep -v "pattern" /path/to/file`. 
+Now, let's move to the last command `grep -v "pattern" /path/to/file`. My first example is `grep -v -l "alcohol" government/Alcohol_Problems/*`. 
+```
+qianzhijun@qianzhijundeMacBook-Pro technical % grep -v "alcohol" government/Alcohol_Problems/*
+government/Alcohol_Problems/Session4-PDF.txt:the model.
+government/Alcohol_Problems/Session4-PDF.txt:Robert Woolard favored continuing intervention research in EDs.
+government/Alcohol_Problems/Session4-PDF.txt:He believed that the realities of our practice settings help drive
+government/Alcohol_Problems/Session4-PDF.txt:the development of new ways of delivering counseling, for example,
+government/Alcohol_Problems/Session4-PDF.txt:computer-based methods. While emergency physicians may not have the
+government/Alcohol_Problems/Session4-PDF.txt:time or interest, the patients do. He suggested that research in
+government/Alcohol_Problems/Session4-PDF.txt:about the interventions they have already developed and can even
+government/Alcohol_Problems/Session4-PDF.txt:lead to novel interventions.
+```
+This command will print out all the lines in the `government/Alcohol_Problems/*` that does not contain `alcohol`. The output is too long so I only copy part of the terminal and paste it here. The `grep -v "pattern" /path/to/file` will print out all lines in the specific directories that do not contain the pattern.  
+  
+The second examples that I choose is `grep -v  "death" 911report/*`
+```
+qianzhijun@qianzhijundeMacBook-Pro technical % grep -v  "death" 911report/*
+911report/preface.txt:            We have listened to scores of overwhelming personal tragedies and astounding acts of
+911report/preface.txt:                heroism and bravery. We have examined the staggering impact of the events of 9/11 on
+911report/preface.txt:                the American people and their amazing resilience and courage as they fought back. We
+911report/preface.txt:                have admired their determination to do their best to prevent another tragedy while
+911report/preface.txt:                preparing to respond if it becomes necessary. We emerge from this investigation with
+911report/preface.txt:                enormous sympathy for the victims and their loved ones, and with enhanced respect
+911report/preface.txt:                for the American people. We recognize the formidable challenges that lie ahead.
+911report/preface.txt:            We also approach the task of recommendations with humility. We have made a limited
+911report/preface.txt:                number of them. We decided consciously to focus on recommendations we believe to be
+911report/preface.txt:                most important, whose implementation can make the greatest difference. We came into
+911report/preface.txt:                this process with strong opinions about what would work. All of us have had to
+911report/preface.txt:                pause, reflect, and sometimes change our minds as we studied these problems and
+911report/preface.txt:                considered the views of others. We hope our report will encourage our fellow
+911report/preface.txt:                citizens to study, reflect-and act.
+911report/preface.txt:            Thomas H. Kean, chair
+911report/preface.txt:            Lee H. Hamilton, vice chair
+```
+This command will search and print out every lines under the `"death" 911report/*` directory that do not contain the word `death`. The output is really long so in here I only copy and paste part of it from the terminal. Therefore we can see that the command `grep -v "pattern" /path/to/file` will print out the lines that does not contain the pattern, and also its corresponding file name. Therefore in the terminal's output, there will be repeat filename.
+
+
