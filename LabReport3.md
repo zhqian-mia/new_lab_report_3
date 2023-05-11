@@ -89,4 +89,4 @@ biomed/1476-4598-2-2.txt:          Ludwig Institute of Cancer Research at UCSD. 
 biomed/bcr620.txt:          UCSD Medical Center. Samples were obtained in random
 biomed/bcr620.txt:          approval of the UCSD Institutional Review Board for
 ```
-This command will search all lines in the files or directories under the biomed/*. It will print out the non-unique files name that contain the whole word `UCSD`. The difference between `-r` and `-w` is that `-r` will print out both non-unique files names and lines as long as it has the pattern, while `-w` will only print out the lines and file names that has the whole word.  
+This command will search all lines in the files or directories under the `biomed/*` that has the word `UCSD`. It will print out the non-unique files name that contain the whole word `UCSD`. The difference between `-r` and `-w` is that `-r` will print out both files names and lines (files name may repeat) as long as it has the pattern, while `-w` will only print out the lines and file names (files name may repeat) that has the whole word.  
