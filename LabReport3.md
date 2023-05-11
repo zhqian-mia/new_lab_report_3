@@ -5,7 +5,7 @@ Today we will look at four interesting commands of `grep`.
 * `grep -l "pattern" /path/to/directory/*`
 * `grep -w "pattern" /path/to/file`
 * `grep -v "pattern" /path/to/file`  
-**All the sources above comes from this [link](https://chat.openai.com/)**
+**All the sources above comes from chatGPT**
   
 Each commands will be offer two different examples to illustrate its functions.  
   
