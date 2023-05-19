@@ -6,7 +6,10 @@ Today we will look at four interesting commands of `grep`.
 * `grep -l "pattern" /path/to/directory/*`
 * `grep -w "pattern" /path/to/directory/*`
 * `grep -v "pattern" /path/to/directory/*`  
-**All the sources above comes from chatGPT**
+  
+**All the sources above comes from chatGPT, below is the prompt and respond**  
+  
+![Image](https://github.com/zhqian-mia/new_lab_report_3/blob/main/chatGPT%20grep%20respond.png?raw=true)
 
 ***
   
