@@ -1,4 +1,5 @@
-## Lab Report 3  ##
+# Lab Report 3  #
+***
   
 Today we will look at four interesting commands of `grep`.  
 * `grep -r "pattern" /path/to/directory`
@@ -6,14 +7,18 @@ Today we will look at four interesting commands of `grep`.
 * `grep -w "pattern" /path/to/directory/*`
 * `grep -v "pattern" /path/to/directory/*`  
 **All the sources above comes from chatGPT**
+
+***
   
 Each commands will be offer two different examples to illustrate its functions.  
   
 For convenience, I used `grep ".txt" find-results.txt > grep-results.txt' to put all txt files into a new file named grep-results.txt. Right now, the file grep-results.txt should have a bunch of file direcotories in it.  
   
-`cd technical`. Now the pwd is `/Users/qianzhijun/Documents/GitHub/docsearch/technical`
+Enter `cd technical` in my terminal. Now the pwd is `/Users/qianzhijun/Documents/GitHub/docsearch/technical`
 
-*Let's try the first command `grep -r "pattern" /path/to/directory`. My first example is `grep -r "UCS" biomed/*`*  
+
+## Let's try the first command `grep -r "pattern" /path/to/directory`.  
+* My first example is `grep -r "UCS" biomed/*`    
 ```
 qianzhijun@qianzhijundeMacBook-Pro technical % grep -r "UCS" biomed/*
 biomed/1471-2091-3-30.txt:        Insel, UCSD) demonstrated constitutive activation of ERKs
@@ -40,17 +45,18 @@ biomed/gb-2003-4-8-r50.txt:        UCSC Genome Browser [ 14 16 ] . The first is 
 biomed/gb-2003-4-8-r50.txt:          UCSC Genome Browser, August 2001 assembly, displays
 biomed/gb-2003-4-8-r50.txt:          available through the UCSC Genome Browser [ 14 15 16 ]
 ```
-This command allow users to search for the three continuous letters `UCS` recursively in all files and directories under `biomed/*`. Both files name and the lines which contain the three letters `UCS` are printed out, which means it could be `UCSD` or `UCSC`. `-r` only show the files name and lines that contain the pattern, but not in whole word.
+**This command allow users to search for the three continuous letters `UCS` recursively in all files and directories under `biomed/*`. Both files name and the lines which contain the three letters `UCS` are printed out, which means it could be `UCSD` or `UCSC`. `-r` only show the files name and lines that contain the pattern, but not in whole word.**
 
-The second example is `grep -r "Toronto" government/`
+* My second example is `grep -r "Toronto" government/`  
 ```
 qianzhijun@qianzhijundeMacBook-Pro technical % grep -r "Toronto" government/
 government//About_LSC/ONTARIO_LEGAL_AID_SERIES.txt:beautiful city of Toronto to talk with you about the subject that
 government//Gen_Account_Office/pe1019.txt:Educational Research Association meeting, Toronto, Canada, April
 ```
-This command allow users to search for the word `Toronto` recursively in all files and directories under `government/`. Both files name and the lines which contain the 7 letters `Toronto` are printed out.
+**This command allow users to search for the word `Toronto` recursively in all files and directories under `government/`. Both files name and the lines which contain the 7 letters `Toronto` are printed out.**
   
-*Now let's try the second command `grep -l "pattern" /path/to/directory/*`. My first example is `grep -l "UCSD" biomed/*`*
+## Now let's try the second command `grep -l "pattern" /path/to/directory/*`.  
+* My first example is `grep -l "UCSD" biomed/*`  
 ```
 qianzhijun@qianzhijundeMacBook-Pro technical % grep -l "UCSD" biomed/*
 biomed/1471-2091-3-30.txt
@@ -60,9 +66,9 @@ biomed/1472-6823-2-2.txt
 biomed/1476-4598-2-2.txt
 biomed/bcr620.txt
 ```
-The output show in the terminal only shows unique file names. To be more specific, the terminal print out all the file under biomed directory that contain the word `UCSD`.  
+**The output show in the terminal only shows unique file names. To be more specific, the terminal print out all the file under biomed directory that contain the word `UCSD`.**  
 
-My second example is `grep -l "Alcohol" biomed/* `.
+* My second example is `grep -l "Alcohol" biomed/* `  
 ```
 qianzhijun@qianzhijundeMacBook-Pro technical % grep -l "Alcohol" biomed/*                                                                            
 biomed/1471-213X-3-4.txt
@@ -75,9 +81,10 @@ biomed/1478-7954-1-3.txt
 biomed/bcr605.txt
 biomed/gb-2001-2-7-research0025.txt
 ```
-As the above, this command find all the unique files' name whose file inside contain the word "Alcohol" under the `biomed` directory.  
+**As the above, this command find all the unique files' name whose file inside contain the word "Alcohol" under the `biomed` directory.**  
   
-*Now, let's move to the third command choice `grep -w "pattern" /path/to/directory/*`. My first example is:`grep -w "UCSD" biomed/*`*
+## Now, let's move to the third command choice `grep -w "pattern" /path/to/directory/*`.   
+* My first example is:`grep -w "UCSD" biomed/*`  
 ```
 qianzhijun@qianzhijundeMacBook-Pro technical % grep -w "UCSD" biomed/*
 biomed/1471-2091-3-30.txt:        Insel, UCSD) demonstrated constitutive activation of ERKs
@@ -89,18 +96,18 @@ biomed/1476-4598-2-2.txt:          Ludwig Institute of Cancer Research at UCSD. 
 biomed/bcr620.txt:          UCSD Medical Center. Samples were obtained in random
 biomed/bcr620.txt:          approval of the UCSD Institutional Review Board for
 ```
-This command will search all lines in the files or directories under the `biomed/*` that has the word `UCSD`. It will print out the non-unique files name that contain the whole word `UCSD`. The difference between `-r` and `-w` is that `-r` will print out both files names and lines (files name may repeat) as long as it has the pattern, while `-w` will only print out the lines and file names (files name may repeat) that has the whole word.  
+**This command will search all lines in the files or directories under the `biomed/*` that has the word `UCSD`. It will print out the non-unique files name that contain the whole word `UCSD`. The difference between `-r` and `-w` is that `-r` will print out both files names and lines (files name may repeat) as long as it has the pattern, while `-w` will only print out the lines and file names (files name may repeat) that has the whole word.**  
   
-My second example is `grep -w "accident" plos/*`
+## My second example is `grep -w "accident" plos/*`  
 ```
 qianzhijun@qianzhijundeMacBook-Pro technical % grep -w "accident" plos/*
 plos/journal.pbio.0020101.txt:        blood cortisol (Sapolsky 1994). An accident of history, however, selectively wiped out all
 plos/journal.pbio.0020216.txt:        without accident. Furthermore, even though bees experience only a small increase in
 ```
-This command will print out the file names and the lines that contain the whole word `accident` under the `plos/*` directory. `-w` will print out the lines and file names that contain the pattern as a whole word.  
+**This command will print out the file names and the lines that contain the whole word `accident` under the `plos/*` directory. `-w` will print out the lines and file names that contain the pattern as a whole word.**  
   
-*Now, let's move to the last command `grep -v "pattern" /path/to/directory/*`.*  
-My first example is `grep -v -l "alcohol" government/Alcohol_Problems/*`.  
+## Now, let's move to the last command `grep -v "pattern" /path/to/directory/*`.    
+* My first example is `grep -v -l "alcohol" government/Alcohol_Problems/*`.  
 ```
 qianzhijun@qianzhijundeMacBook-Pro technical % grep -v "alcohol" government/Alcohol_Problems/*
 government/Alcohol_Problems/Session4-PDF.txt:the model.
@@ -112,9 +119,9 @@ government/Alcohol_Problems/Session4-PDF.txt:time or interest, the patients do. 
 government/Alcohol_Problems/Session4-PDF.txt:about the interventions they have already developed and can even
 government/Alcohol_Problems/Session4-PDF.txt:lead to novel interventions.
 ```
-This command will print out all the lines in the `government/Alcohol_Problems/*` that does not contain `alcohol`. The output is too long so I only copy part of the terminal and paste it here. The `grep -v "pattern" /path/to/file` will print out all lines in the specific directories that do not contain the pattern.  
+**This command will print out all the lines in the `government/Alcohol_Problems/*` that does not contain `alcohol`. The output is too long so I only copy part of the terminal and paste it here. The `grep -v "pattern" /path/to/file` will print out all lines in the specific directories that do not contain the pattern.**  
   
-The second examples that I choose is `grep -v  "death" 911report/*`
+* The second examples that I choose is `grep -v  "death" 911report/*`
 ```
 qianzhijun@qianzhijundeMacBook-Pro technical % grep -v  "death" 911report/*
 911report/preface.txt:            We have listened to scores of overwhelming personal tragedies and astounding acts of
@@ -134,6 +141,6 @@ qianzhijun@qianzhijundeMacBook-Pro technical % grep -v  "death" 911report/*
 911report/preface.txt:            Thomas H. Kean, chair
 911report/preface.txt:            Lee H. Hamilton, vice chair
 ```
-This command will search and print out every lines under the `"death" 911report/*` directory that do not contain the word `death`. The output is really long so in here I only copy and paste part of it from the terminal. Therefore we can see that the command `grep -v "pattern" /path/to/file` will print out the lines that does not contain the pattern, and also its corresponding file name. Therefore in the terminal's output, there will be repeat filename.
+**This command will search and print out every lines under the `"death" 911report/*` directory that do not contain the word `death`. The output is really long so in here I only copy and paste part of it from the terminal. Therefore we can see that the command `grep -v "pattern" /path/to/file` will print out the lines that does not contain the pattern, and also its corresponding file name. Therefore in the terminal's output, there will be repeat filename.**  
 
 
